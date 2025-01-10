@@ -19,7 +19,7 @@ function Weather({ data }) {
       <p>Temperature: {data?.current?.temp_c ?? "N/A"}°C</p>
       <p>Feels Like: {data?.current?.feelslike_c ?? "N/A"}°C</p>
       <p>Humidity: {data?.current?.humidity ?? "N/A"}%</p>
-      <p>Wind Speed: {data?.current?.wind_kph ?? "N/A"} km/h</p>
+      <p>Wind Speed: {data?.current?.wind_mph ?? "N/A"} mp/h</p>
     </div>
   );
 }

@@ -1,0 +1,28 @@
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex; 
+  justify-content: space-between; /* Space items appropriately */
+  align-items: center; /* Align items vertically in the center */
+}
+
+.navbar .nav-links {
+  display: flex; /* Group navigation links in a single line */
+  gap: 15px; /* Add spacing between links */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
