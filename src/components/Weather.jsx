@@ -3,8 +3,10 @@ import React from "react";
 function Weather({ data }) {
   return (
     <div className="weather">
-      <h2>{data?.location?.name || "Unknown Location"}</h2>
+      <h1>{data?.location?.name || "Unknown Location"}</h1>
       <h3>{data?.location?.region || "Region not available"}</h3>
+      <h2>{data?.location?.country || "Unknown Country"}</h2>
+      <p>{data?.location?.localtime}</p>
 
       <div className="weather-condition">
         <img

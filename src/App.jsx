@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import Weather from "./components/Weather";
 import { fetchWeather } from "./utils/fetchWeather";
+import './styles/App.css';
 
 function App() {
+
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
+
+  let cityLower = city.toLowerCase();
 
   const handleSearch = async () => {
     const data = await fetchWeather(city);
     if (data && data.location) {
       setWeatherData(data);
+      document.body.style.background = `url(/images/${cityLower}.jpg)`;
     } else {
       alert("City not found or error fetching data.");
+      document.body.style.background = '#ffffff';
     }
   };
 
