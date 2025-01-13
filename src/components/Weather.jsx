@@ -9,7 +9,7 @@ function Weather({ data  }) {
 
     <div className="country-flag">
       <img 
-        src={`/images/${data.location.country}.png)`}
+        src={`./public/flags/${data.location.country}.png` || ""}
       />
     </div>
 
