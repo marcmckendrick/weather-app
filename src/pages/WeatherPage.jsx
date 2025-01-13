@@ -7,14 +7,14 @@ const WeatherPage = () => {
 
       const [city, setCity] = useState("");
       const [weatherData, setWeatherData] = useState(null);
-    
+
       let cityLower = city.toLowerCase();
     
       const handleSearch = async () => {
         const data = await fetchWeather(city);
         if (data && data.location) {
           setWeatherData(data);
-          document.body.style.background = `url(/images/${cityLower}.jpg)`;
+          document.body.style.background = `url(/images/${cityLower}.jpg) no-repeat`;
         } else {
           alert("City not found or error fetching data.");
           document.body.style.background = '#ffffff';
@@ -32,6 +32,8 @@ const WeatherPage = () => {
           />
           <button onClick={handleSearch}>Search</button>
           {weatherData && <Weather data={weatherData} />}
+
+          <div className="app-background"></div>
         </div>
       );
 };
